@@ -1,0 +1,28 @@
+:root {
+  --color-bg-accent: #ffffff;
+  --color-text-muted: #4a5565;
+  --color-text-primary: #0f1729;
+  --color-text-price: #145cfc;
+  --color-text-footer: #4a5466;
+  --color-text-name: #6b7382;
+  --color-count: #fa2b36;
+  --color-bg-footer: #f9fafb;
+  --color-button: #145cfc;
+  --color-text-button: #0a0a0a;
+  --color-button-wishlist: #ffffff;
+  --color-border: #e5e7eb;
+}
+.dark {
+  --color-bg-accent: #101828;
+  --color-bg-footer: #1e2939;
+  --color-text-primary: #f9fafb;
+  --color-text-muted: #99a1b0;
+  --color-text-price: #145cfc;
+  --color-text-footer: #99a1af;
+  --color-text-name: #6b7382;
+  --color-count: #fa2b36;
+  --color-border: #364153;
+  --color-button: #145cfc;
+  --color-button-wishlist: #262626;
+  --color-text-button: #fafafa;
+}
