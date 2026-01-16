@@ -16,6 +16,7 @@ function Cart() {
           </div>
           <button
             type="button"
+            onClick={() => navigate("/")}
             className="flex items-center justify-center gap-2 rounded-md font-medium text-white bg-bg-button  text-sm  hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors duration-200 w-fit mx-auto px-3 py-2"
           >
             Continue Shopping

@@ -26,7 +26,9 @@ export function WishListProvider({ children }) {
     }
   }
   return (
-    <WishlistContext.Provider value={{ toggleWishList, items, isInWishlist }}>
+    <WishlistContext.Provider
+      value={{ toggleWishList, items, isInWishlist, removeFromWishlist }}
+    >
       {children}
     </WishlistContext.Provider>
   );

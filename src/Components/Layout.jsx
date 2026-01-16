@@ -7,7 +7,7 @@ function Layout() {
     <>
       <ScrollToTop />
       <Header />
-      <main className="bg-accent">
+      <main className="bg-accent transition-colors duration-200">
         <Outlet />
       </main>
       <Footer />
