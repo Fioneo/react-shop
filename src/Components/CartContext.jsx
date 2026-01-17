@@ -1,9 +1,19 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [items, setItems] = useState([]);
-
+  const [items, setItems] = useState(() => {
+    try {
+      const saved = localStorage.getItem("cartItems");
+      const parsed = saved ? JSON.parse(saved) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  });
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(items));
+  }, [items]);
   function addToCart(product) {
     setItems((current) => {
       const existing = current.find((item) => item.id === product.id);
@@ -11,7 +21,7 @@ export function CartProvider({ children }) {
         return current.map((item) =>
           product.id === item.id
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       }
       return [...current, { ...product, quantity: 1 }];
@@ -27,8 +37,8 @@ export function CartProvider({ children }) {
     }
     setItems((current) =>
       current.map((item) =>
-        item.id === productId ? { ...item, quantity } : item
-      )
+        item.id === productId ? { ...item, quantity } : item,
+      ),
     );
   }
   function clearCart() {
@@ -36,7 +46,7 @@ export function CartProvider({ children }) {
   }
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
 
   return (

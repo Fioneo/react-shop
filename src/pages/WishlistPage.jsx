@@ -21,7 +21,7 @@ function Wishlist() {
   }
   if (items.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center flex flex-col gap-8">
           <div className="text-center flex flex-col gap-2">
             <Heart className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
@@ -81,7 +81,7 @@ function Wishlist() {
                     </h3>
                     <span className="text-price">${product.price}</span>
                     <button
-                      className="w-full bg-white text-black font-medium hover:bg-bg-button hover:text-white  transition-colors duration-300 shadow-lg flex justify-center items-center gap-2 rounded-lg py-2"
+                      className="w-full bg-bg-button text-white font-medium   transition-colors duration-300 shadow-lg flex justify-center items-center gap-2 rounded-lg py-2 hover:bg-blue-700 dark:hover:bg-blue-800"
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();

@@ -7,7 +7,7 @@ function Cart() {
 
   if (items.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center flex flex-col gap-8">
           <div className="text-center flex flex-col gap-2">
             <ShoppingBag className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
@@ -26,7 +26,7 @@ function Cart() {
     );
   }
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-40">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
       <h3 className="text-primary  mb-8">Shopping Cart</h3>
       <div className=" grid lg:grid-cols-3 gap-8 items-start">
         <div className="grid lg:col-span-2  gap-8">
@@ -43,8 +43,8 @@ function Cart() {
                 />
               </div>
               <div className="flex flex-col gap-2 flex-1">
-                <div className="flex justify-between">
-                  <h3 className="text-primary font-semibold text-[18px]">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-primary font-semibold text-[18px] truncate max-w-[100px] min-[360px]:min-w-fit">
                     {item.name}
                   </h3>
                   <div>
@@ -57,12 +57,12 @@ function Cart() {
                   </div>
                 </div>
                 <span className="text-sm text-muted">{item.category}</span>
-                <div className="flex justify-between">
-                  <div className="flex items-center border border-border rounded-lg gap-3">
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center border border-border rounded-lg gap-2 sm:gap-3">
                     <button
                       type="button"
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      className="p-2 text-muted transtion-colors hover:bg-gray-50  dark:hover:bg-gray-700 disabled:opacity-50"
+                      className="p-2  text-muted transtion-colors hover:bg-gray-50  dark:hover:bg-gray-700 disabled:opacity-50"
                       disabled={item.quantity <= 1}
                     >
                       <Minus className="w-4 h-4" />
@@ -71,7 +71,7 @@ function Cart() {
                     <button
                       type="button"
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="p-2 text-muted transtion-colors hover:bg-gray-50  dark:hover:bg-gray-700 disabled:opacity-50"
+                      className="p-2 text-muted transtion-colors hover:bg-gray-50  dark:hover:bg-gray-700 disabled:opacity-50 "
                     >
                       <Plus className="w-4 h-4" />
                     </button>
