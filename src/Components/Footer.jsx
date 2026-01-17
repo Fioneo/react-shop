@@ -45,19 +45,28 @@ function Footer() {
               <h4 className="text-primary">Support</h4>
               <ul className="flex flex-col gap-2">
                 <li>
-                  <a href="#" className="text-footer hover:text-primary">
+                  <button
+                    type="button"
+                    className="text-footer hover:text-primary bg-transparent p-0 border-0 cursor-pointer"
+                  >
                     Contact
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-footer hover:text-primary">
+                  <button
+                    type="button"
+                    className="text-footer hover:text-primary bg-transparent p-0 border-0 cursor-pointer"
+                  >
                     FAQ
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-footer hover:text-primary">
+                  <button
+                    type="button"
+                    className="text-footer hover:text-primary bg-transparent p-0 border-0 cursor-pointer"
+                  >
                     Shipping
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

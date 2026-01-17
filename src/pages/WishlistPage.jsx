@@ -61,7 +61,7 @@ function Wishlist() {
                   />
 
                   <button
-                    className="absolute top-3 right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 z-10"
+                    className="absolute top-3 right-3 w-10 h-10 bg-accent rounded-full flex items-center justify-center shadow-md  transition-all duration-200 hover:scale-110 z-10"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();

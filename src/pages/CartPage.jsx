@@ -1,5 +1,5 @@
 import { Trash2, Minus, Plus, ShoppingBag } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "../Components/CartContext";
 function Cart() {
   const navigate = useNavigate();
@@ -44,9 +44,12 @@ function Cart() {
               </div>
               <div className="flex flex-col gap-2 flex-1">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-primary font-semibold text-[18px] truncate max-w-[100px] min-[360px]:min-w-fit">
-                    {item.name}
-                  </h3>
+                  <Link to={`/products/${item.id}`}>
+                    <h3 className="text-primary font-semibold text-[18px] truncate max-w-[100px] min-[360px]:min-w-fit">
+                      {item.name}
+                    </h3>
+                  </Link>
+
                   <div>
                     <button
                       className="text-footer hover:text-count transtion-colors duration-100"
