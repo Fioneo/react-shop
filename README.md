@@ -15,7 +15,7 @@ A **Website** built with **React**, **Tailwind CSS**, and **Lucide React icons**
 
 ### Wishlist
 - Save favorite products for later  
-- Persisted in `localStorage`  
+- Data saved in `localStorage`  
 - Easy add/remove to cart  
 
 ### Global State Management
